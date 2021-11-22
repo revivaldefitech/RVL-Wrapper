@@ -251,44 +251,9 @@ function App() {
       <h1 className="text-2xl font-medium text-red-500 text-center text-black">Wrap your RVL for Staking</h1>
       <h4 className="mt-2 opacity-80">Fully decentralized</h4>
 
-      <div className="max-w-xl mt-8 mx-auto rounded-xl" style={{backgroundColor: '#f9f8fd'}}>
-          <div className="flex items-center border-b h-28 px-8 py-4">
-            <div className="col border-r w-1/2 h-full">
-              <h4>RVL balance:</h4>
-              <p className="mt-2">{ssb}</p>
-              </div>
-            <div className="col w-1/2 h-full">
-                <h4>WRVL balance:</h4>
-                <p className="mt-2">{wssb}</p>
-            </div>
-        </div>
+     
 
-        <div className="row px-8" >
-          <div className="col mt-10">
-          Convert RVL into WRVL
-          <input type="text" className="form-control mt-4" id="exampleInputEmail1" placeholder="amount of RVL" style={{background:'white', color:'black'}} aria-describedby="emailHelp" onChange={(event) => setSsbToStake(event.target.value)} />
-          <br />
-          {approval == "0"?           <button type="button" class="btn btn-primary font-medium" style={{width:'100%'}} onClick={approve} disabled={loading}>Approve Spending</button>
- :           <button type="button" class="btn btn-primary" style={{width:'100%'}} onClick={wrapSSB} disabled={loading}>WRAP RVL</button>
-}
-          </div>
-        </div>
-
-        <br /> <br />
-        <div className="row px-8" >
-          <div className="col">
-          Convert WRVL into RVL
-          <input type="text" class="form-control mt-4 " id="exampleInputEmail1" placeholder="amount of WRVL" style={{background:'white', color:'black'}} aria-describedby="emailHelp" onChange={(event) => setWssbToStake(event.target.value)} />
-          <br />
-          <button type="button" class="btn btn-primary font-medium" style={{width:'100%'}} onClick={unwrapSSB} disabled={loading}>UNWRAP RVL</button>
-          </div>
-        </div>
-
-        <br /> <br />
-        <div className="row px-8">
-        {active === false ? (      <>
-
-{Object.keys(connectorsByName).map(name => {
+      {Object.keys(connectorsByName).map(name => {
   const currentConnector = connectorsByName[name];
   const activating = currentConnector === activatingConnector;
   const connected = currentConnector === connector;
@@ -302,7 +267,7 @@ function App() {
         setActivatingConnector(currentConnector);
         activate(connectorsByName[name]);
       }}
-      style={{float:'right',color: "white", background:'#9B51E0'}}
+      style={{color: "white", background:'#20c997'}}
     >
         {activating && (
           "Loading..."
@@ -315,14 +280,64 @@ function App() {
       Connect to Wallet
     </button>
   );
-})}
+})}      
+
+      <div className="max-w-xl mt-8 mx-auto rounded-xl" style={{backgroundColor: '#f9f8fd'}}>
+          <div className="flex items-center border-b h-28 px-8 py-4">
+            <div className="col border-r w-1/2 h-full">
+              <h4>RVL Balance:</h4>
+              <p className="mt-2">{ssb}</p>
+              </div>
+            <div className="col w-1/2 h-full">
+                <h4>WRVL Balance:</h4>
+                <p className="mt-2">{wssb}</p>
+            </div>
+        </div>
+
+
+
+
+
+<div>
+
+
+
+</div>
+
+
+        <div className="row px-8" >
+          <div className="col mt-10">
+          Convert RVL into WRVL
+          <input type="text" className="form-control mt-4" id="exampleInputEmail1" placeholder="Amount of RVL" style={{background:'white', color:'black'}} aria-describedby="emailHelp" onChange={(event) => setSsbToStake(event.target.value)} />
+          <br />
+          {approval == "0"?           <button type="button" class="btn btn-primary font-medium" style={{width:'100%'}} style={{backgroundColor:'#3952A8'}} onClick={approve} disabled={loading}>Approve Spending</button>
+ :           <button type="button" class="btn btn-primary" style={{width:'100%'}} style={{backgroundColor:'#3952A8'}} onClick={wrapSSB} disabled={loading}>WRAP RVL</button>
+}
+          </div>
+        </div>
+
+        <br /> <br />
+        <div className="row px-8" >
+          <div className="col">
+          Convert WRVL into RVL
+          <input type="text" class="form-control mt-4 " id="exampleInputEmail1" placeholder="Amount of WRVL" style={{background:'white', color:'black'}} aria-describedby="emailHelp" onChange={(event) => setWssbToStake(event.target.value)} />
+          <br />
+          <button type="button" class="btn btn-primary font-medium" style={{width:'100%'}} style={{backgroundColor:'#3952A8'}}  onClick={unwrapSSB} disabled={loading}>UNWRAP RVL</button>
+          </div>
+        </div>
+
+        <br /> <br />
+        <div className="row px-8">
+        {active === false ? (      <>
+
+
 </>) : null}
 {(active || error) && (
           <button type="button" class="btn btn-text"
             onClick={() => {
               deactivate();
             }}
-            style={{color:"white", float:'right', border:'1px solid blue'}}
+            style={{color:"white", float:'right'}}
           >
             Disconnect
           </button>
