@@ -261,7 +261,7 @@ function App() {
     !triedEager || !!activatingConnector || connected || !!error;
   return (
     <button type="button" class="btn btn-primary font-medium"
-      disabled=false
+      disabled={disabled}
       key={name}
       onClick={() => {
         setActivatingConnector(currentConnector);
