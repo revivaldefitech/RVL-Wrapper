@@ -267,7 +267,7 @@ function App() {
         setActivatingConnector(currentConnector);
         activate(connectorsByName[name]);
       }}
-      style={{color: "white", background:'#3952A8'}}
+      style={{color: "white", background:'#20c997'}}
     >
         {activating && (
           "Loading..."
@@ -282,7 +282,7 @@ function App() {
   );
 })}      
 
-      <div className="max-w-xl mt-8 mx-auto rounded-xl" style={{backgroundColor: '#f9f8fd'}}>
+      <div className="max-w-xl mt-10 mx-auto rounded-xl" style={{backgroundColor: '#f9f8fd'}}>
           <div className="flex items-center border-b h-28 px-8 py-4">
             <div className="col border-r w-1/2 h-full">
               <h4>RVL Balance:</h4>
@@ -322,7 +322,7 @@ function App() {
           Convert WRVL into RVL
           <input type="text" class="form-control mt-4 " id="exampleInputEmail1" placeholder="Amount of WRVL" style={{background:'white', color:'black'}} aria-describedby="emailHelp" onChange={(event) => setWssbToStake(event.target.value)} />
           <br />
-          <button type="button" class="btn btn-primary font-medium" style={{width:'100%'}} style={{backgroundColor:'#3952A8'}}  onClick={unwrapSSB} disabled={loading}>Unwrap RVL</button>
+          <button type="button" class="btn btn-primary font-medium" style={{width:'100%'}} style={{backgroundColor:'#3952A8'}}  onClick={unwrapSSB} disabled={loading}>UNWRAP RVL</button>
           </div>
         </div>
 
