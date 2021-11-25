@@ -322,7 +322,7 @@ function App() {
           Convert WRVL into RVL
           <input type="text" class="form-control mt-4 " id="exampleInputEmail1" placeholder="Amount of WRVL" style={{background:'white', color:'black'}} aria-describedby="emailHelp" onChange={(event) => setWssbToStake(event.target.value)} />
           <br />
-          <button type="button" class="btn btn-primary font-medium" style={{width:'100%'}} style={{backgroundColor:'#3952A8'}}  onClick={unwrapSSB} disabled={loading}>UNWRAP RVL</button>
+          <button type="button" class="btn btn-primary font-medium" style={{width:'100%'}} style={{backgroundColor:'#3952A8'}}  onClick={unwrapSSB} disabled={loading}>Unwrap RVL</button>
           </div>
         </div>
 
