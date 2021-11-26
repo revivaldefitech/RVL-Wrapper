@@ -1,0 +1,13 @@
+@media (max-width: 768px) { 
+    .my-container{
+        flex-wrap: wrap;
+        height: fit-content !important;
+    }
+    
+    .break-on-mobile{
+        flex: 0 0 100%;
+    }
+    .secondbreak{
+        margin-top: 2rem;
+    }
+ }

@@ -283,12 +283,12 @@ function App() {
 })}      
 
       <div className="max-w-xl mt-10 mx-auto rounded-xl" style={{backgroundColor: '#f9f8fd'}}>
-          <div className="flex items-center border-b h-28 px-8 py-4">
-            <div className="col border-r w-1/2 h-full">
+          <div className="flex items-center border-b h-28 px-8 py-4 my-container">
+            <div className="col border-r w-1/2 h-full break-on-mobile">
               <h4>RVL Balance:</h4>
               <p className="mt-2">{ssb}</p>
               </div>
-            <div className="col w-1/2 h-full">
+            <div className="col w-1/2 h-full break-on-mobile secondbreak">
                 <h4>WRVL Balance:</h4>
                 <p className="mt-2">{wssb}</p>
             </div>
