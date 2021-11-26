@@ -267,7 +267,7 @@ function App() {
         setActivatingConnector(currentConnector);
         activate(connectorsByName[name]);
       }}
-      style={{color: "white", background:'#20c997'}}
+      style={{color: "white", background:'#f9f8fd'}}
     >
         {activating && (
           "Loading..."
